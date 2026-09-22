@@ -59,6 +59,31 @@ def totales_por_categoria(df):
 
 # --- APP ---
 st.title("Control de gastos")
+st.markdown("""
+<style>
+    /* Texto general más grande */
+    html, body, [class*="css"] { font-size: 30px !important; }
+
+    /* Título principal */
+    h1 { font-size: 40px !important; }
+
+    /* Pestañas (Cargar gasto / Gastos del día / Acumulado) */
+    button[data-baseweb="tab"] p { font-size: 30px !important; }
+
+    /* Etiquetas de los campos (Concepto, Categoría, Monto, Fecha) */
+    label p { font-size: 30px !important; }
+
+    /* Campos de texto, número y select */
+    input, textarea, .stSelectbox div, .stNumberInput input { font-size: 30px !important; }
+
+    /* Botón Agregar */
+    button[kind="secondaryFormSubmit"] p, button[kind="primary"] p { font-size: 30px !important; }
+
+    /* Números grandes (Gasto total del día, Acumulado) */
+    [data-testid="stMetricValue"] { font-size: 60px !important; }
+    [data-testid="stMetricLabel"] { font-size: 25px !important; }
+</style>
+""", unsafe_allow_html=True)
 pedir_clave()
 df = cargar_gastos()
 
